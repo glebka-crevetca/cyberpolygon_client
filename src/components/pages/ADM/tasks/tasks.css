@@ -1,0 +1,445 @@
+html, body {	
+	margin: 0px;
+	padding: 0px;
+	font-family: "Roboto";
+	font-style: normal;
+}
+
+header {
+	position: relative;
+	height: 69px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #ACACAC;
+}
+
+button {
+	background: none;
+}
+#guap-panel{
+	margin-right: 58px;
+}
+
+	#guap-logo {
+		width: 146px;
+		height: 39px;
+	}
+
+#main-panel{
+	display: flex;
+	width: 860px;
+	margin-left: 41px;
+	align-items: center;
+}
+
+#nav-panel {
+	width: 656px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#navPanelForm {
+	height: 23px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	#nav-panel button {
+		height: 23px;
+		border: 0px;
+		font-weight: 500;
+		font-size: 20px;
+		color: #474A4E;
+	}
+
+#checkbox {
+	visibility: hidden;
+}
+
+#checkbox-group {
+	position: relative;
+	width: 64px;
+	height: 32px;
+	background: #F0F0F0;
+	border: 1px solid #ACACAC;
+	border-radius: 20px;
+	margin-right: 59px;
+}
+
+
+#checkbox-label {
+	display: block;
+	width: 19px;
+	height: 19px;
+	background: #AAAAAA;
+	border-radius: 50%;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	transition: all 0.4s ease;
+	cursor: pointer;
+}
+
+#checkbox:checked + #checkbox-label {
+	left: 38px;
+}
+
+#main-container{
+	display: flex;
+}
+
+	#left-container{
+		width: 215px;
+		height: 942px;
+		border-right: 1px solid #ACACAC;
+	}
+
+	#left-container button {
+		border: 0px;
+		display: flex;
+	    width: 215px;
+	    height: 63px;
+	    align-items: center;
+	    font-weight: 400;
+	    border-bottom: 1px solid #ACACAC;
+	    font-size: 20px;
+	    background: #FFFFFF;
+    	color: #474A4E;
+	}
+
+	
+
+	#central-container{
+		margin-left: 41px;
+		margin-top: 23px;
+	}
+		#central-top-container {
+			width: 1127px;
+		}
+
+		#central-top-container-header{
+			font-weight: 700;
+			font-size: 24px;
+			color: #000000;
+		}
+
+		#central-top-container-body{
+			position: relative;
+			margin-top: 19px;
+			padding-top: 27px;
+			padding-left: 27px;
+			width: 1100px;
+			height: 495px;
+			background: rgba(238, 238, 238, 0.73);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 10px;
+			display: flex;
+		}
+
+
+			#task-left-container {
+				position: relative;
+				display: flex;
+				width: 393px;
+				flex-direction: column;
+				margin-right: 130px;
+			}
+
+				#task-left-container-top {
+					width: 393px;
+					height: 44px;
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 24px;
+				}
+
+				#task-left-container p{
+					margin-left: 15px;
+				}
+
+					#task-left-container-top-name {
+						width: 238px;
+						height: 44px;
+						border-radius: 5px;
+						background: #D9D9D9;
+						font-weight: 300;
+						font-size: 20px;
+						display: flex;
+						align-items: center;
+					}
+
+					#task-left-container-top-count {
+						width: 135px;
+						height: 44px;
+						background: #D9D9D9;
+						border-radius: 5px;
+						font-weight: 300;
+						font-size: 20px;
+						display: flex;
+						align-items: center;
+					}
+			#task-left-container-text {
+				width: 393px;
+				height: 152px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				position: relative;
+				margin-bottom: 24px;
+			}	
+
+			#left-container-text-input {
+				height: 98px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				border: 0px;
+				resize: none;
+				padding-top: 10px;
+				padding-left: 15px;
+				font-weight: 300;
+				font-size: 20px;
+				margin-bottom: 24px;
+			}
+
+			#selectID {
+				width: 326px;
+				height: 44px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				border: 0px;
+				padding-left: 15px;
+				font-size: 20px;
+				margin-bottom: 24px;
+			}
+
+			#selectID2 {
+				width: 326px;
+				height: 44px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				border: 0px;
+				padding-left: 15px;
+				font-size: 20px;
+				margin-bottom: 24px;
+			}
+		#task-right-container {
+			display: flex;
+			flex-direction: column;
+			width: 559px;
+			height: 402px;
+		}
+
+		#task-right-container-header {
+			width: 187px;
+			height: 44px;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 11px;
+			margin-left: 40px;
+		}
+		#task-right-container-header-cont{
+			width: 127px;
+			height: 44px;
+			font-weight: 300;
+			font-size: 32px;
+			line-height: 38px;
+			text-decoration-line: underline;
+			background: #34495E;
+			border-radius: 5px;
+			color: #FFFFFF;
+			display: flex;
+			justify-content: center;
+		}
+
+		#task-right-container-header-icon {
+			border: 0px;
+			width: 39px;
+			height: 39px;
+			position: relative;
+		}
+
+
+		#task-right-container-body {
+			width: 559px;
+			height: 347px;
+			border-left:1px solid #000000;;
+			display: flex;
+		}
+
+			#task-right-container-body-text {
+				width: 338px;
+				height: 148px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				margin-left: 41px;
+				margin-top: 13px;
+				resize: none;
+				border: 0px;
+				font-weight: 300;
+				font-size: 20px;
+				padding-top: 10px;
+				padding-left: 15px;
+			}
+
+			#task-right-container-body-inputs {
+				width: 155px;
+				height: 149px;
+				display: flex;
+				flex-direction: column;
+				margin-top: 13px;
+				margin-left: 23px;
+				justify-content: space-between;
+			}
+
+			#task-right-container-body-fileInput {
+				width: 155px;
+				height: 53px;
+				background: #D9D9D9;
+				border-radius: 5px;
+			}
+
+			#file-input {
+				width: 0.1px;
+				height: 0.1px;
+				opacity: 0;
+				overflow: hidden;
+				position: absolute;
+				z-index: -1;
+			}
+
+			#reg-file-input {
+				display: flex;
+				margin-top: 7px;
+				align-items: center;
+			}
+
+			#reg-file-input span {
+				font-weight: 400;
+				font-size: 24px;
+				margin-left: 13px;
+				margin-right: 32px;
+			}
+
+			#stud-bilet-logo {
+				width: 40px;
+				height: 41px;
+			}
+
+			#stud-logo-container {
+				display: flex;
+			}
+
+			#file-input + label {
+				cursor: pointer;
+			}
+
+			#task-right-container-body-add button{
+				border: 0px;
+				width: 155px;
+				height: 53px;
+				background: #D9D9D9;
+				border-radius: 5px;
+				font-weight: 400;
+				font-size: 24px;
+				color: #474A4E;
+			}
+	#bottom-container {
+		width: 1125px;
+		height: 150px;
+		margin-top: 53px;
+		display: flex;
+		flex-direction: column;
+	}
+
+		#bottom-container-header{
+			display: flex;
+			justify-content: space-between;
+			font-weight: 700;
+			font-size: 24px;
+			height: 50px;
+			align-items: center;
+		}
+
+			#bottom-container-header-search {
+				display: flex;
+				align-items: center;
+				
+			}
+
+			#loop-logo {
+				width: 23px;
+				height: 23px;
+				display: none;
+			}
+
+				#bottom-container-header-search input {
+					border: 0px;
+					outline:none;
+					background: #D9D9D9;
+					border-radius: 31px;
+					width: 327px;
+					height: 50px;
+					padding-left:15px;
+					font-size: 24px;
+				}
+		#bottom-container-body {
+			margin-top: 30px;
+			height: 70px;
+			border-top: 1px solid #ACACAC;
+			border-bottom: 1px solid #ACACAC;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+			#edit-icon {
+				width: 39px;
+				height: 39px;
+				display: block;
+			}
+
+			#edit-icon-night {
+				width: 39px;
+				height: 39px;
+				display: none;
+			}
+
+			#bottom-container-body p{
+				font-weight: 400;
+				font-size: 20px;
+			} 
+
+			#bottom-container-body-nazv {
+				margin-left: 22px;
+			}
+
+			#bottom-container-body-icons {
+				display: flex;
+				justify-content: space-between;
+				width: 95px;
+				height: 39px;
+				margin-right: 36px;
+			}
+
+			#bottom-container-body-icons button {
+				border: 0px;
+				background: none;
+			}
+
+#delete-icon {
+	display: block;
+}
+
+#delete-icon-night {
+	display: none;
+}
+
+#delete-icon2 {
+	display: block;
+}
+
+#delete-icon-night2 {
+	display: none;
+}

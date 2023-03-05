@@ -11,20 +11,18 @@ export const Tasks = () => {
     const tasks = useTasks(state => state.tasks, shallow);
     const { loadTasks, category, setCategory } = useTasks(state => ({ loadTasks: state.loadTasks, category: state.category, setCategory: state.setCategory }));
     const userCategories = useUser(state => state.categories);
-    const [loading, setLoading] = useState(false)
 
     function handleScroll() {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         const scrollTop = document.documentElement.scrollTop;
-        if (windowHeight + scrollTop >= documentHeight - 1 && !loading && tasks[category]?.nextPage !== null) {
-            setLoading(true);
-            loadTasks().finally(() => { setLoading(false) });
+        if (windowHeight + scrollTop >= documentHeight - 1 && tasks[category]?.nextPage !== null) {
+            loadTasks();
         }
     }
- 
 
-    
+
+
     useEffect(() => {
         if (!tasks[category]?.data) loadTasks();
         window.addEventListener('scroll', handleScroll);

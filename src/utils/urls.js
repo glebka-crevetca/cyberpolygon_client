@@ -6,5 +6,7 @@ export const PATHS = {
     aboutTask: '/aboutTask',
     profile: '/profile',
     login: '/login',
-    register: '/registration'
+    register: '/registration',
+    admin: '/adminPage',
+    users: '/users'
 };
