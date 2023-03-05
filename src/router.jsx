@@ -6,8 +6,11 @@ import { Registration } from "./components/pages/LogReg/registration";
 import { Materials } from "./components/pages/materials/materials";
 import { TaskInfo } from "./components/pages/tasks/taskInfo";
 import { Tasks } from "./components/pages/tasks/tasks";
-//TODO import { ErrorPage } from "./components/pages/error-page";
-//TODO import { NotFoundPage } from "./components/pages/not-found-page";
+import { ADMLayout } from "./components/pages/ADM/ADMLayout";
+import { ADMTasks } from "./components/pages/ADM/tasks/tasks";
+import { ADMMaterials } from "./components/pages/ADM/materials/materials";
+import { ADMUsers } from "./components/pages/ADM/users/users";
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -41,6 +44,25 @@ export const router = createBrowserRouter([
       {
         path: PATHS.register,
         element: <Registration />
+      },
+      {
+        path: PATHS.admin,
+        element: <ADMLayout />,
+        errorElement: <>ErrorPage</>,
+        children: [
+          {
+            path: PATHS.admin + PATHS.tasks,
+            element: <ADMTasks />,
+          },
+          {
+            path: PATHS.admin + PATHS.materials,
+            element: <ADMMaterials />,
+          },
+          {
+            path: PATHS.admin + PATHS.users,
+            element: <ADMUsers />,
+          },
+        ]
       },
       {
         path: "*",

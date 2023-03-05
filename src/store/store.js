@@ -7,7 +7,7 @@ export const useUser = create((set, get) => ({
     name: null,
     surname: null,
     categories: [],
-    role: 'user',
+    role: 'admin',
     setUser: (user) => {
         set({
             id: user.id,
@@ -23,20 +23,25 @@ export const useUser = create((set, get) => ({
             name: null,
             surname: null,
             categories: [],
-            role: 'user',
+            role: 'admin',
         })
     }
 }))
 
 export const useMaterials = create((set, get) => ({
+    isLoading: false,
     materials: {},
     category: 'all',
     loadMaterials: async () => {
         try {
             const cat = get().category;
-            if (get().tasks[cat]?.nextPage !== null) {
-                const response = await api.get(`/materials?category=${cat}&page=${get().materials[cat]?.nextPage || 1}`);
-                set({ materials: { ...get().materials, [cat]: { data: [...(get().materials[cat]?.data ?? []), ...response.data.materials], nextPage: response.data.nextPage } } })
+            if (get().materials[cat]?.nextPage !== null && !get().isLoading) {
+                set({isLoading: true});
+                await api.get(`/materials?category=${cat}&page=${get().materials[cat]?.nextPage || 1}`)
+                .then(response => {
+                    set({ materials: { ...get().materials, [cat]: { data: [...(get().materials[cat]?.data ?? []), ...response.data.materials], nextPage: response.data.nextPage } } })
+                })
+                .finally(() => {set({isLoading: false})})
             }
         } catch (error) {
             console.log("error when fetch materials", error)
@@ -46,14 +51,19 @@ export const useMaterials = create((set, get) => ({
 }))
 
 export const useTasks = create((set, get) => ({
+    isLoading: false,
     tasks: {},
     category: 'all',
     loadTasks: async () => {
         try {
             const cat = get().category;
-            if (get().tasks[cat]?.nextPage !== null) {
-                const response = await api.get(`/tasks?category=${cat}&page=${get().tasks[cat]?.nextPage || 1}`);
-                set({ tasks: { ...get().tasks, [cat]: { data: [...(get().tasks[cat]?.data ?? []), ...response.data.tasks], nextPage: response.data.nextPage } } })
+            if (get().tasks[cat]?.nextPage !== null && !get().isLoading) {
+                set({isLoading: true});
+                await api.get(`/tasks?category=${cat}&page=${get().tasks[cat]?.nextPage || 1}`)
+                .then(response => {
+                    set({ tasks: { ...get().tasks, [cat]: { data: [...(get().tasks[cat]?.data ?? []), ...response.data.tasks], nextPage: response.data.nextPage } } })
+                })
+                .finally(() => {set({isLoading: false})})
             }
         } catch (error) {
             console.log("error when fetch tasks", error)
