@@ -15,7 +15,7 @@ export const Materials = () => {
         const documentHeight = document.documentElement.scrollHeight;
         const scrollTop = document.documentElement.scrollTop;
         if (windowHeight + scrollTop >= documentHeight - 1 && materials[category]?.nextPage !== null) {
-            loadMaterials(); console.log("fetch")
+            loadMaterials();
         }
     }
 
