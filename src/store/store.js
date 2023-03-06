@@ -6,7 +6,7 @@ export const useUser = create((set, get) => ({
     id: null,
     name: null,
     surname: null,
-    categories: [],
+    categories: ['stegano'],
     role: 'admin',
     setUser: (user) => {
         set({
@@ -22,7 +22,7 @@ export const useUser = create((set, get) => ({
             id: null,
             name: null,
             surname: null,
-            categories: [],
+            categories: ['stegano'],
             role: 'admin',
         })
     }
@@ -52,8 +52,8 @@ export const useMaterials = create((set, get) => ({
 
 export const useTasks = create((set, get) => ({
     isLoading: false,
-    tasks: {},
-    category: 'all',
+    tasks: {stegano: {data: [{id: 0, title: "TITLE", description: "description", points: 123, }, {id: 1, title: "TITLE", description: "description", points: 123, }, {id: 2, title: "TITLE", description: "description", points: 123, }, {id: 3, title: "TITLE", description: "description", points: 123, }, {id: 4, title: "TITLE", description: "description", points: 123, }, {id: 5, title: "TITLE", description: "description", points: 123, }], nextPage: null}},
+    category: 'stegano',
     loadTasks: async () => {
         try {
             const cat = get().category;
