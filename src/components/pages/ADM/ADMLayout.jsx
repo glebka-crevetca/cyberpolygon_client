@@ -1,11 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { useUser } from "../../../store/store";
+import { ADMSideBar } from "./uiComponents/sideBar";
 
 export const ADMLayout = () => {
   const userRole = useUser((state) => state.role);
 
-  return userRole === 'admin' ?
-  <Outlet></Outlet>
-  :
-  <>NotFoundErrorPage</>
+  return (
+    <div style={{display: "flex"}}>
+      <ADMSideBar />
+      {
+        userRole === 'admin' ?
+          <Outlet></Outlet>
+          :
+          <>NotFoundErrorPage</>
+      }
+    </div>
+  )
 };
