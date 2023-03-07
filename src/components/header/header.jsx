@@ -8,6 +8,7 @@ import './header.css'
 
 export const Header = () => {
     const userId = useUser(state => state.id)
+    const userRole = useUser(state => state.role)
 
     return (
         <header>
@@ -27,7 +28,7 @@ export const Header = () => {
                         <div id="materials_1"><img src={underlineSvg} alt="" /></div>
                     </div>
                     <div className="menu_button">
-                        <div id="exersise"><Link to={userId ? PATHS.profile : PATHS.login} className="menu_item">Профиль</Link></div>
+                        <div id="exersise"><Link to={userId ? (userRole === 'admin' ? PATHS.admin : PATHS.profile) : PATHS.login} className="menu_item">Профиль</Link></div>
                         <div id="exersise_1"><img src={underlineSvg} alt="" /></div>
                     </div>
                 </div>
