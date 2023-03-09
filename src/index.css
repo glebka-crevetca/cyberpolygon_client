@@ -1,0 +1,17 @@
+/* CSS ПЕРЕМЕННЫЕ */
+
+/*light theme*/
+html[mode='light'] {
+    --background-color: white;
+    --menu-item-color: #474A4E;
+    --content-toggle-square-background: #EEEEEE;
+
+}
+
+/*dark theme*/
+html[mode='dark'] {
+    --background-color: #161E35;
+    --menu-item-color: #A8A8A8;
+    --content-toggle-square-background: #293659;
+    --material-menu_add_item-backdround: #222D4A;
+}

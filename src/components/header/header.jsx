@@ -3,12 +3,15 @@ import { PATHS } from '../../utils/urls'
 import brandSvg from '../../assets/brand.svg'
 import underlineSvg from '../../assets/underline.svg'
 import { useUser } from '../../store/store'
+import { useMode } from "../../customHooks/useTheme"
 import './header.css'
 
 
 export const Header = () => {
     const userId = useUser(state => state.id)
     const userRole = useUser(state => state.role)
+    const toggleMode = useMode('dark')
+
 
     return (
         <header>
@@ -30,6 +33,9 @@ export const Header = () => {
                     <div className="menu_button">
                         <div id="exersise"><Link to={userId ? (userRole === 'admin' ? PATHS.admin : PATHS.profile) : PATHS.login} className="menu_item">Профиль</Link></div>
                         <div id="exersise_1"><img src={underlineSvg} alt="" /></div>
+                    </div>
+                    <div class="menu__togle-square" onClick={toggleMode}>
+                        <div id='change' class="menu__togle" ></div>
                     </div>
                 </div>
             </div>
