@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-import arrowBtnSvg from "../../assets/arrowBtn.svg"
 import { Card } from "./card"
 
 export const CardsContainer = ({ data, fullInfoPath }) => {
