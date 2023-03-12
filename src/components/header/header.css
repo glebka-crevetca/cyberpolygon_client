@@ -1,3 +1,5 @@
+@import url('../../index.css');
+
 * {
     padding: 0;
     margin: 0;
@@ -95,6 +97,7 @@ h6 {
     height: 69px;
     border-bottom: 1px solid #ACACAC;
     opacity: .99;
+    background-color: var(--background-color);
 }
 
 .menu_items {
@@ -110,7 +113,7 @@ h6 {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #474A4E;
+    color: var(--menu-item-color);
 }
 
 .menu_button {
@@ -127,6 +130,26 @@ h6 {
     height: 5px;
     position: absolute;
     bottom: -1px;
+}
+
+.menu__togle-square {
+    width: 64px;
+    height: 32px;
+    background-color: var(--content-toggle-square-background);
+    border: 1px solid #ACACAC;
+    border-radius: 20px;
+    margin-left: 397px;
+    margin-top: 19px;
+}
+
+.menu__togle {
+    width: 19px;
+    height: 19px;
+    border-radius: 20px;
+    background-color: #AAAAAA;
+    margin-left: 35.5px;
+    margin-top: 6px;
+    cursor: pointer;
 }
 
 #main #profile #materials #exersise {
