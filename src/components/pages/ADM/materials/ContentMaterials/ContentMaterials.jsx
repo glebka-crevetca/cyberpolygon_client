@@ -6,9 +6,6 @@ export const ContentMaterials = () => {
         [{articleTitle: "Title1", articleDescript: "Description1"},
         {articleTitle: "Title2", articleDescript: "Description2"}];
 
-    let ContentBlocks = materials
-        .map ( a => <ContentBlock data = {a} /> );
-
     return (
         <div className="content__materials">
             <div className="content__first-block">
@@ -20,7 +17,7 @@ export const ContentMaterials = () => {
 
             </div>
             <div className="content__second_block">
-                {ContentBlocks}
+                {materials.map(material => (<ContentBlock data={a} />))}
             </div>
         </div>
     );
