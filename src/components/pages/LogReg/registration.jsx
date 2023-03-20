@@ -170,7 +170,7 @@ export const Registration = () => {
                         </div>
                         <button id="button" type="submit" onClick={submitHandler}>Зарегистрироваться</button>
                     </form>
-                    <Link to='/login'>Уже зарегестрирован? Авторизуйся!</Link>
+                    <Link to='/login'>Уже зарегистрирован? Авторизуйся!</Link>
                 </div>
             </div>
         </>
