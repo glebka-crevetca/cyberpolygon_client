@@ -347,7 +347,6 @@ button {
 			}
 	#bottom-container {
 		width: 1125px;
-		height: 150px;
 		margin-top: 53px;
 		display: flex;
 		flex-direction: column;
@@ -360,6 +359,7 @@ button {
 			font-size: 24px;
 			height: 50px;
 			align-items: center;
+			margin-bottom: 30px;
 		}
 
 			#bottom-container-header-search {
@@ -385,7 +385,6 @@ button {
 					font-size: 24px;
 				}
 		#bottom-container-body {
-			margin-top: 30px;
 			height: 70px;
 			border-top: 1px solid #ACACAC;
 			border-bottom: 1px solid #ACACAC;
