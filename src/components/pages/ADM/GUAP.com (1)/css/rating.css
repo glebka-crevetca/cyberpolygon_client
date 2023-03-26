@@ -30,7 +30,7 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-
+@import url('../../index.css');
 body{
     font-family: "Roboto", sans-serif;
 }
@@ -40,7 +40,7 @@ body{
     width: 100%;
     height: 69px;
     border-bottom: 1px solid #ACACAC;
-    background: white;
+    background: var(--background-color);
     top: 0;
     position: fixed;
 }
@@ -56,7 +56,7 @@ body{
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #474A4E;
+    color: var(--menu-item-color);
 }
 .menu_button{
     display: flex;
@@ -180,7 +180,7 @@ body{
 	position: absolute;
 	width: 64px;
 	height: 32px;
-	background: #F0F0F0;
+	background: #F0F0F0;  /*Dark: #293659 */
 	border: 1px solid #ACACAC;
 	border-radius: 20px;
 	margin-left: 85vw;
@@ -210,7 +210,7 @@ body{
     position: fixed;
     right: 0;
     top: 0;
-    background-color: white;
+    background-color: var(--background-color);
     display: none;
   }
 
@@ -231,7 +231,7 @@ body{
 
   .navbar .nav-container a {
     text-decoration: none;
-    color: #474A4E;
+    color: var(--menu-item-color);
     font-weight: 400;
     font-size: 1.2rem;
     padding: 0.7rem;
@@ -277,7 +277,7 @@ body{
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #34495E;
+    background: #34495E;    /*Dark: #AAAAAA */
   }
 
   .nav-container .hamburger-lines .line1 {
@@ -304,11 +304,11 @@ body{
     text-align: center;
     margin-left: -150px;
     top: 0;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-bottom: 1px solid black;    /*Dark: 1px solid #ACACAC */
+    border-left: 1px solid black;   /*Dark: 1px solid #ACACAC */
     border-bottom-left-radius: 15px;
     position: fixed;
-    background-color: white;
+    background-color: var(--background-color);
 
   }
 
@@ -401,7 +401,7 @@ body{
     display: flex;
     margin-top: calc(40px + 10*((100vw - 320px)/(1280 - 320)));
     margin-bottom: 33px;
-    background-color: #D2EAFF;
+    background-color: #D2EAFF;    /*Dark: #4A5A68 */
     border-radius: 20px;
 }
 .your_name_position{
@@ -411,11 +411,12 @@ body{
     font-size: calc(20px + 25*((100vw - 320px)/(1280 - 320)));
     margin-top: 20px;
     font-weight: 500;
+    /* Dark: color: #A8A8A8; */
 }
 .your_position{
     font-size: calc(25px + 20*((100vw - 320px)/(1280 - 320)));
     margin-top: calc(30px + 9*((100vw - 320px)/(1280 - 320)));
-    color: #5A5A5A;
+    color: #5A5A5A;    /*Dark: #B9B9B9 */
 }
 .your_percent{
     width: calc(77px + 30*((100vw - 320px)/(1280 - 320)));
@@ -425,7 +426,7 @@ body{
     padding-top: calc(25px + 13*((100vw - 320px)/(1280 - 320)));
     margin-top: -30px;
     margin-left: 8px;
-    background: #D2EAFF;
+    background: #D2EAFF;    /*Dark: #4A5A68 */
     border-radius: 50%;
 }
 .your_percent_rad{
@@ -650,20 +651,20 @@ body{
     font-weight: 500;
 }
 .top_top_one{
-    background: linear-gradient(to right, #3EB6EB, #005AAA, #AA005C);
+    background: linear-gradient(to right, #3EB6EB, #005AAA, #AA005C);    /*Dark: #18223f */
     width: 332px;
     height: calc(130px + 49*((100vw - 320px)/(1280 - 320)));
     border-radius: 20px;
     color: #FFFFFF;
 }
 .top_top_two{
-    background: linear-gradient(to right, #62BFEA, #4E78BD);
+    background: linear-gradient(to right, #62BFEA, #4E78BD);    /*Dark: #1b2545 */
     width: 332px;
     height: calc(130px + 49*((100vw - 320px)/(1280 - 320)));
     border-radius: 20px;
 }
 .top_top_three{
-    background: linear-gradient(to right, #62BFEA, #4E78BD);
+    background: linear-gradient(to right, #62BFEA, #4E78BD);    /*Dark: #1b2545 */
     width: 332px;
     height: calc(130px + 49*((100vw - 320px)/(1280 - 320)));
     border-radius: 20px;
@@ -717,14 +718,16 @@ body{
     width: 100%;
     height: calc(65px + 15*((100vw - 320px)/(1280 - 320)));
     border-radius: 20px;
-    background: #61BAE7;
+    background: #61BAE7;    /*Dark: #293659 */
     display: flex;
+    /*Dark: color: #A8A8A8 */
 }
 .top_five{
     width: 100%;
     height: calc(65px + 15*((100vw - 320px)/(1280 - 320)));
     border-radius: 20px;
-    background: #61BAE7;
+    background: #61BAE7;    /*Dark: #293659 */
+    /*Dark: color: #A8A8A8 */
     display: flex;
     margin-top: 19px;
     margin-bottom: calc(50px + 150*((100vw - 320px)/(1280 - 320)));
